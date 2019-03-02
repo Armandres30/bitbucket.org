@@ -1,0 +1,14 @@
+# config/routes.yaml
+
+# the "app_home_resume" route name is not important yet
+
+app_form:
+    path: /home/form
+    controller: App\Controller\HomepageController::form
+
+app_home_resume:
+    path: /resume/{user}
+    controller: App\Controller\ResumeController::resume
+    requirements:
+        user: '[a-zA-Z0-9-_.]+[a-zA-Z0-9-_.]+'
+
